@@ -1,3 +1,4 @@
 dist
 node_modules
+aoc-cache
 .env
