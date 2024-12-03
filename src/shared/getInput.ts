@@ -10,7 +10,6 @@ export default async function getInput(dayIndex: string): Promise<string> {
 
 	try {
 		const cachedInput = await fs.readFile(cacheFile, 'utf8');
-		console.log('Cache');
 		return cachedInput;
 	} catch (err) {
 		if (err.code !== 'ENOENT') {
@@ -30,7 +29,6 @@ export default async function getInput(dayIndex: string): Promise<string> {
 	}
 
 	const input = await response.text();
-	console.log('Network');
 
 	try {
 		await fs.writeFile(cacheFile, input, 'utf8');
