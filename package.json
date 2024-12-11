@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"start": "node --env-file .env dist/index.js 5 0",
-		"start-benchmark": "node --env-file .env dist/index.js 5 1",
+		"start": "node --env-file .env dist/index.js 6 0",
+		"start-benchmark": "node --env-file .env dist/index.js 6 1",
 		"watch": "tsc --watch"
 	},
 	"keywords": [],
