@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"start": "node --max-old-space-size=16384 --env-file .env dist/index.js 6 0",
-		"start-benchmark": "node --max-old-space-size=16384 --env-file .env dist/index.js 6 1",
+		"start": "node --max-old-space-size=16384 --env-file .env dist/index.js 7 0",
+		"start-benchmark": "node --max-old-space-size=16384 --env-file .env dist/index.js 7 1",
 		"watch": "tsc --watch"
 	},
 	"keywords": [],

@@ -63,7 +63,7 @@ const directions: Position[] = [
 ];
 
 function getDistinctPositions(map: Map, startPosition: Position, startDirectionIndex: number): { positions: Set<Position>; loops: boolean } {
-	const visitedIds = new Set<number>();
+	const visitedHashedPositions = new Set<number>();
 	const visitedDirections = new Set<number>();
 
 	let currentPosition = startPosition;
@@ -72,7 +72,7 @@ function getDistinctPositions(map: Map, startPosition: Position, startDirectionI
 
 	while (isInBounds(map, currentPosition)) {
 		const key = hash(currentPosition.x, currentPosition.y);
-		visitedIds.add(key);
+		visitedHashedPositions.add(key);
 
 		const directionKey = hash(key, directionIndex);
 		if (visitedDirections.has(directionKey)) {
@@ -96,7 +96,7 @@ function getDistinctPositions(map: Map, startPosition: Position, startDirectionI
 
 	return {
 		positions: new Set(
-			Array.from(visitedIds).map((id) => {
+			Array.from(visitedHashedPositions).map((id) => {
 				const { a, b } = inverseHash(id);
 				const position: Position = { x: a, y: b };
 				return position;
