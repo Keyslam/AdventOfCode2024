@@ -22,6 +22,7 @@ const day6: Day = {
 		parseInput(input);
 		return 0;
 	},
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	solve_second(input: string): number {
 		return 0;
 	},
