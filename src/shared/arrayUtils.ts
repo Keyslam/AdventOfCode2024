@@ -12,3 +12,7 @@ export function createFlat2DIdentityArray(width: number, height: number): { x: n
 		y: Math.floor(index / width),
 	}));
 }
+
+export function pairs<T>(array: T[]): [T, T][] {
+	return array.flatMap((element, i) => array.slice(i + 1).map((otherElement) => [element, otherElement] as [T, T]));
+}
