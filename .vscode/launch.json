@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Start Program",
+      "program": "${workspaceFolder}/dist/index.js",
+      "args": ["24", "0"],
+      "envFile": "${workspaceFolder}/.env",
+      "runtimeArgs": ["--max-old-space-size=16384"],
+      "skipFiles": ["<node_internals>/**"],
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Start Benchmark",
+      "program": "${workspaceFolder}/dist/index.js",
+      "args": ["24", "1"],
+      "envFile": "${workspaceFolder}/.env",
+      "runtimeArgs": ["--max-old-space-size=16384"],
+      "skipFiles": ["<node_internals>/**"],
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    }
+  ]
+}

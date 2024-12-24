@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"start": "node --max-old-space-size=16384 --env-file .env dist/index.js 8 0",
-		"start-benchmark": "node --max-old-space-size=16384 --env-file .env dist/index.js 8 1",
+		"start": "node --max-old-space-size=16384 --env-file .env dist/index.js 24 0",
+		"start-benchmark": "node --max-old-space-size=16384 --env-file .env dist/index.js 24 1",
 		"watch": "tsc --watch"
 	},
 	"keywords": [],
@@ -21,6 +21,7 @@
 		"typescript-eslint": "^8.16.0"
 	},
 	"dependencies": {
-		"lodash": "^4.17.21"
+		"lodash": "^4.17.21",
+		"ts-graphviz": "^2.1.5"
 	}
 }
