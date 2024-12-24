@@ -14,5 +14,21 @@ export function createFlat2DIdentityArray(width: number, height: number): { x: n
 }
 
 export function pairs<T>(array: T[]): [T, T][] {
-	return array.flatMap((element, i) => array.slice(i + 1).map((otherElement) => [element, otherElement] as [T, T]));
+	return array //
+		.flatMap((element, i) =>
+			array //
+				.slice(i + 1)
+				.map((otherElement) => [element, otherElement] as [T, T]));
+}
+
+export function triplets<T>(array: T[]): [T, T, T][] {
+	return array //
+		.flatMap((element, i) =>
+			array //
+				.slice(i + 1)
+				.flatMap((otherElement, j) =>
+					array //
+						.slice(i + j + 2)
+						.map((thirdElement) => [element, otherElement, thirdElement] as [T, T, T])),
+	);
 }
