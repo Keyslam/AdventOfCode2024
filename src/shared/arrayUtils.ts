@@ -21,6 +21,13 @@ export function pairs<T>(array: T[]): [T, T][] {
 				.map((otherElement) => [element, otherElement] as [T, T]));
 }
 
+export function pair<T, Y>(a: T[], b: Y[]): [T, Y][] {
+	return a //
+		.flatMap((e) =>
+			b.map(o => [e, o] as [T, Y])
+		);
+}
+
 export function triplets<T>(array: T[]): [T, T, T][] {
 	return array //
 		.flatMap((element, i) =>
